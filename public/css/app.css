@@ -1,0 +1,155 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-image: linear-gradient(to right, #007bff, #00bcd4);
+    -webkit-background-clip: text; /* Untuk mendukung browser berbasis WebKit */
+    background-clip: text;
+    color: transparent; /* Mengubah warna teks menjadi transparan */
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.disabled {
+    pointer-events: none;
+    color: gray;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+hr {
+    opacity: 0.5; /* Mengatur opasitas garis */
+    height: 100%; /* Mengatur tinggi garis menjadi 100% */
+}
+
+.btn-image{
+    background-image: url('../print.png');
+}
+
+/* Gaya untuk checkbox */
+.custom-checkbox {
+    pointer-events: none;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    -webkit-appearance: none; /* Menghilangkan tampilan default */
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    border: 1px solid #000; /* Sesuaikan border sesuai kebutuhan */
+    cursor: pointer;
+}
+
+/* Menampilkan centang SVG sebagai latar belakang saat checkbox dicentang */
+.custom-checkbox:checked {
+    background-image: url('../icons8-check-208.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%; /* Sesuaikan ukuran ceklis */
+}
+
+/* Mengubah latar belakang menjadi merah saat dicentang */
+.custom-checkbox:checked {
+    background-color: red;
+}
+
+.custom-checkbox-2 {
+    pointer-events: none;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    -webkit-appearance: none; /* Menghilangkan tampilan default */
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    border: 1px solid #000; /* Sesuaikan border sesuai kebutuhan */
+    cursor: pointer;
+}
+
+/* Menampilkan centang SVG sebagai latar belakang saat checkbox dicentang */
+.custom-checkbox-2:checked {
+    background-image: url('../icons8-check-208.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%; /* Sesuaikan ukuran ceklis */
+}
+
+/* Mengubah latar belakang menjadi merah saat dicentang */
+.custom-checkbox-2:checked {
+    background-color: blue;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 24px;
+    top: 57%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+.separator {
+    margin: 1px 0;  border-top: 1px solid #ddd;  }
+
+/* Mengatur opacitas ceklis agar terlihat saat dicetak */
+@media print {
+    .custom-checkbox:checked {
+        background-color: red;
+    }
+
+    .custom-checkbox:checked::after {
+        content: '\2714'; /* Unicode untuk tanda centang ✓ */
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .custom-checkbox-2:checked {
+        background-color: red;
+    }
+
+    .custom-checkbox-2:checked::after {
+        content: '\2714'; /* Unicode untuk tanda centang ✓ */
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+

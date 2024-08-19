@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-image: linear-gradient(to right, #007bff, #00bcd4);
+    -webkit-background-clip: text; /* Untuk mendukung browser berbasis WebKit */
+    background-clip: text;
+    color: transparent; /* Mengubah warna teks menjadi transparan */
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.disabled {
+    pointer-events: none;
+    color: gray;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+hr {
+    opacity: 0.5; /* Mengatur opasitas garis */
+    height: 100%; /* Mengatur tinggi garis menjadi 100% */
+}
